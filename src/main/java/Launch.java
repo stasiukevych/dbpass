@@ -1,17 +1,12 @@
-import builder.DBPropertiesBuilder;
 import connection.vendor.MySQLConnection;
-import java.sql.Connection;
+import handler.ConnectionHandler;
+import handler.Handler;
 
 public class Launch {
   public static void main(String[] args) {
-    MySQLConnection mysqlConnection = new MySQLConnection();
-    DBPropertiesBuilder dbPropertiesBuilder = new DBPropertiesBuilder(args[0]);
-    Connection connection = mysqlConnection.connection(
-        dbPropertiesBuilder.dbName(),
-        dbPropertiesBuilder.dbUser(),
-        dbPropertiesBuilder.dbPass(),
-        dbPropertiesBuilder.dbPort(),
-        dbPropertiesBuilder.dbHost()
+    Handler handler = new ConnectionHandler(
+        new MySQLConnection(),
+        args[0]
     );
   }
 }
