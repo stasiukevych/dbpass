@@ -14,6 +14,7 @@ import controller.port.vendor.MySQLVendorPortController;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import logging.ConnectionLogger;
 
 public class MySQLConnection implements DBConnection {
 
@@ -37,6 +38,10 @@ public class MySQLConnection implements DBConnection {
   @Override
   public Connection connection(String dbName, String dbUser, String dbPass, int port, String host) {
     if (controller.verified(dbName, dbPass, port, host)) {
+      ConnectionLogger.info("data base name is a correct: " + dbName);
+      ConnectionLogger.info("data base host is a correct: " + host);
+      ConnectionLogger.info("data base port is a correct: " + port);
+      ConnectionLogger.info("data base user is a " + dbUser);
       try {
         return DriverManager.getConnection(
             DBUrlBuilder.buildURL("mysql", dbName, port, host),
