@@ -9,7 +9,7 @@ public class LocalPortController {
     try (Socket socket = new Socket(host, port)) {
       return socket.isConnected();
     } catch (IOException exception) {
-      ConnectionLogger.error(exception.getMessage());
+      new ConnectionLogger().error(exception.getMessage());
       exception.printStackTrace();
     }
     return false;

@@ -37,9 +37,9 @@ public class ConnectionHandler implements Handler {
         }
       } else {
         try {
-          ConnectionLogger.info("was connected to " + connection.getCatalog());
+          new ConnectionLogger().info("was connected to " + connection.getCatalog());
         } catch (SQLException throwable) {
-          ConnectionLogger.error(throwable.getMessage());
+          new ConnectionLogger().error(throwable.getMessage());
         }
         console.printf(">_ connection was installed, welcome\n");
       }
