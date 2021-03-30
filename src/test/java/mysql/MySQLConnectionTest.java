@@ -12,7 +12,5 @@ public class MySQLConnectionTest {
   public void testConnection() {
     MySQLConnection mySQLConnection = new MySQLConnection();
     Assertions.assertNull(mySQLConnection.connection("name", "user", "pass", 11, "host"));
-    Assertions.assertNotNull(mySQLConnection.connection("password", "stasiukevych.a",
-        "#Anatolii27sdfJNjdfgomdfgiuhIUHIUsdfijsdfhiuHIUIUFdsfhiuUIHFdsIUH", 3306, "localhost"));
   }
 }
