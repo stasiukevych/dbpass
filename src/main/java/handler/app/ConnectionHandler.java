@@ -1,4 +1,4 @@
-package handler;
+package handler.app;
 
 import builder.DBPropertiesBuilder;
 import connection.vendor.MySQLConnection;

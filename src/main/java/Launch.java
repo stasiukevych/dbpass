@@ -1,10 +1,11 @@
 import connection.vendor.MySQLConnection;
-import handler.ConnectionHandler;
-import handler.Handler;
-import handler.RequestHandler;
+import handler.app.ConnectionHandler;
+import handler.app.Handler;
+import handler.app.RequestHandler;
+import java.sql.SQLException;
 
 public class Launch {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws SQLException {
     final Handler connectionHandler = new ConnectionHandler(
         new MySQLConnection(),
         args[0]
