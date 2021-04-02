@@ -30,7 +30,7 @@ public class ConnectionHandler implements Handler {
           dbPropertiesBuilder.dbHost()
       );
       if (connection == null) {
-        final String answer = console.readLine(">_ do you wanna continue (y-yes,n-no): ");
+        final String answer = /*console.readLine(">_ do you wanna continue (y-yes,n-no): ")*/"a";
         if (answer.equalsIgnoreCase("n")) {
           clearConnectionEntity();
           break;
@@ -41,7 +41,7 @@ public class ConnectionHandler implements Handler {
         } catch (SQLException throwable) {
           new ConnectionLogger().error(throwable.getMessage());
         }
-        console.printf(">_ connection was installed, welcome\n");
+//        console.printf(">_ connection was installed, welcome\n");
       }
     }
   }

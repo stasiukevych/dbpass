@@ -28,15 +28,12 @@ public class RequestHandler implements Handler {
     console
         .printf(String.format(">_ let's start [%s]\n", connection.getMetaData().getUserName()));
     while (true) {
-      console.printf("\n");
       printDBPassMenu(console);
       final String selection = console.readLine(">_ you choice: ");
       if (selection.equalsIgnoreCase("<exit>")) {
-        console.printf("\n");
         break;
       }
       session.handleSelection(selection);
-      console.printf("\n");
     }
     console.printf(">_ bye \n");
   }
