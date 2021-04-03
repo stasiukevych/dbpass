@@ -1,5 +1,6 @@
 package handler.app;
 
+import handler.sql.FetchSQLExecutor;
 import handler.sql.InsertSQLExecutor;
 import handler.sql.SelectSQLExecutor;
 import java.io.Console;
@@ -21,6 +22,9 @@ public class Session {
         break;
       case "<insert>":
         InsertSQLExecutor.insertPassword(connection, pathToConfiguration);
+        break;
+      case "<password>":
+        FetchSQLExecutor.password(connection, pathToConfiguration);
         break;
       default:
         new SessionLogger().error(">_ command isn't supported");

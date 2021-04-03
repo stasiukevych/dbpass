@@ -47,6 +47,7 @@ public class RequestHandler implements Handler {
   private void printDBPassMenu(Console console) {
     console.printf(">_ show status db, print <show>\n");
     console.printf(">_ insert value, print <insert>\n");
+    console.printf(">_ get password, print <password>\n");
     console.printf(">_ update value, print <update>\n");
     console.printf(">_ delete value, print <delete>\n");
     console.printf(">_ if you wanna exist, print <exit>\n");
