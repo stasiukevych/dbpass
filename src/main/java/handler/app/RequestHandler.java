@@ -9,9 +9,15 @@ public class RequestHandler implements Handler {
   private Session session;
   private Console console;
   private Connection connection;
+  private String pathToConfiguration;
 
   public RequestHandler(final Connection connection) {
     init(connection);
+  }
+
+  public RequestHandler(final Connection connection, final String pathToConfiguration) {
+    this(connection);
+    this.pathToConfiguration = pathToConfiguration;
   }
 
   private void init(final Connection connection) {
@@ -33,7 +39,7 @@ public class RequestHandler implements Handler {
       if (selection.equalsIgnoreCase("<exit>")) {
         break;
       }
-      session.handleSelection(selection);
+      session.handleSelection(selection, pathToConfiguration, console);
     }
     console.printf(">_ bye \n");
   }

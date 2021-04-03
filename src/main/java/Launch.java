@@ -10,7 +10,7 @@ public class Launch {
         new MySQLConnection(),
         args[0]
     );
-    final Handler requestHandler = new RequestHandler(connectionHandler.connection());
+    final Handler requestHandler = new RequestHandler(connectionHandler.connection(), args[0]);
     requestHandler.startInteraction();
   }
 }
