@@ -39,7 +39,7 @@ public class RequestHandler implements Handler {
       if (selection.equalsIgnoreCase("<exit>")) {
         break;
       }
-      session.handleSelection(selection, pathToConfiguration, console);
+      session.handleSelection(selection, pathToConfiguration);
     }
     console.printf(">_ bye \n");
   }
@@ -50,6 +50,6 @@ public class RequestHandler implements Handler {
     console.printf(">_ get password, print <password>\n");
     console.printf(">_ update value, print <update>\n");
     console.printf(">_ delete value, print <delete>\n");
-    console.printf(">_ if you wanna exist, print <exit>\n");
+    console.printf(">_ if you wanna exit, print <exit>\n");
   }
 }
