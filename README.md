@@ -41,8 +41,8 @@ user@example:~$ java -jar DBPass.jar full_path_to_your_dbProperties.properties
 ```
 ## How to use it ?
 So, basically we have 5 options for working.
- **>_ show status db**
-**>_ insert value**
+ **>_ show status db** </br>
+**>_ insert value** 
 **>_ get password**
 **>_ update value**
 **>_ delete value**
