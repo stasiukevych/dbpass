@@ -1,7 +1,7 @@
 # dbpass - is a password store tool
 It is a open source tool for storing password basically using local data base. 
 In the below section I described some things why it was created. And main
-things is a why?/how to configure it?/how to lunch it?/how to use it?/. 
+things is a why?/how to configure it?/how to lunch it?. 
 So, welcome.
 ## Why ? 
 If you don't trust any software implementation, you can use it, change 
@@ -39,13 +39,6 @@ db_pass_salt = your_salt_for_AES
 ```console
 user@example:~$ java -jar DBPass.jar full_path_to_your_dbProperties.properties 
 ```
-## How to use it ?
-So, basically we have 5 options for working.
- **>_ show status db** </br>
-**>_ insert value** 
-**>_ get password**
-**>_ update value**
-**>_ delete value**
 And try it. And enjoy it.
 
 
